@@ -1,0 +1,38 @@
+Alunos:
+João Victor Soares Gomes
+Matheus Antonio Oliveira Cardoso
+Matheus Osório Carvalho Cerqueira
+Ramon dos Santos Ferreira
+-----------------------
+
+0- Os arquivos já estão compilados, mas para compilá-los, entre na pasta PubSub e execute:
+
+    javac -d classes Cell.java Client.java ClientImpl.java Server.java ServerImpl.java
+
+1- entrar na pasta PubSub/classes e executar rmiregistry
+
+2- Na pasta PubSub, em um novo terminal, executar:
+   
+   java -classpath classes -Djava.rmi.server.codebase=file:classes/ pubsub.ServerImpl
+   
+   caso tenha funcionado, irá aparecer "Server Ready"
+
+3- Na pasta PubSub, em um novo terminal, executar:
+
+java -classpath classes -Djava.rmi.server.codebase=file:classes/ pubsub.ClientImpl [user] [A] [B]
+
+   onde:
+   [user] é uma string para identificar esse usuário
+   [A] é um inteiro que define a chave para a qual o cliente quer se inscrever
+   [B] é um inteiro que define a chave que o cliente quer publicar
+
+4- Para que algum valor seja exibido nesse cliente, execute, na pasta PubSub, em outro terminal:
+
+java -classpath classes -Djava.rmi.server.codebase=file:classes/ pubsub.ClientImpl [user2] [_] [A]
+
+    onde:
+    [user2] é uma identificação para o segundo cliente
+    [_] é qualquer chave para a qual esse cliente deseja inscrever-se (para que algum valor seja impresso também nesse cliente, utilize o mesmo valor de [B])
+    [A] é a memsa chave para a qual o cliente anterior se inscreveu.
+
+Resultado esperado: que seja impresso no primeiro cliente: Value of cell:
