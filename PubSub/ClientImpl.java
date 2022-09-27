@@ -63,7 +63,7 @@ public class ClientImpl implements Serializable, Client{
             registry = LocateRegistry.getRegistry(host);
             Server stub = (Server) registry.lookup("PubSub");
             
-            System.err.println("Subscribind to: " + A + "\nPublishing: " + B + "\n");
+            System.err.println("Se inscrevendo em: " + A + "\nPublicando: " + B + "\n");
 
             if (A != 0){          
                 Integer sub_key;
