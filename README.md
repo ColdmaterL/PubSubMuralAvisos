@@ -1,4 +1,4 @@
 # Alunos:
-Lucas Mendonça De Morais Cavalcante
-Carlos Vinicios De Souza Azeredo
-Reinaldo Coutinho de Sa Junior
+<br>Lucas Mendonça De Morais Cavalcante
+<br>Carlos Vinicios De Souza Azeredo
+<br>Reinaldo Coutinho de Sa Junior
